@@ -1,0 +1,102 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "level-e01.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "Big Mountain.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Earth terrain.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Extra Plants.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Foreground.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "General Terrain.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Hills.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "More Grassland.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Sky Complete.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Sky.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "elemental_project.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level-e01.tmx": {
+            "scale": 1.186015625,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 189.71082273894996,
+                "y": 118.46386931032211
+            }
+        }
+    },
+    "last.imagePath": "/Users/shanessapeiris/Documents/Sixth Form/Y13/Computer Science/KET/elemental_project/assets/images/Background",
+    "map.height": 23,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 40,
+    "openFiles": [
+        "General Terrain.tsx",
+        "Earth terrain.tsx",
+        "Extra Plants.tsx",
+        "More Grassland.tsx",
+        "Sky.tsx",
+        "Foreground.tsx",
+        "Hills.tsx",
+        "Sky Complete.tsx",
+        "Big Mountain.tsx",
+        "level-e01.tmx"
+    ],
+    "project": "elemental_project.tiled-project",
+    "recentFiles": [
+        "General Terrain.tsx",
+        "Earth terrain.tsx",
+        "Extra Plants.tsx",
+        "More Grassland.tsx",
+        "Sky.tsx",
+        "Foreground.tsx",
+        "Hills.tsx",
+        "Sky Complete.tsx",
+        "Big Mountain.tsx",
+        "level-e01.tmx",
+        "elemental_project.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
