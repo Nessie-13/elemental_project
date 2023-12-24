@@ -41,6 +41,7 @@
             "scaleInEditor": 1
         },
         "Sky Complete.tsx": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -57,8 +58,8 @@
             "scale": 1.186015625,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 189.71082273894996,
-                "y": 118.46386931032211
+                "x": 315.3415453527435,
+                "y": 189.28924313286345
             }
         }
     },
