@@ -15,4 +15,5 @@ class Earth1 extends World {
     return super.onLoad();
     //super refers to whatever we are extending
   }
+  
 }
