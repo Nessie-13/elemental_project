@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-e01.tmx",
+    "activeFile": "",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -63,7 +63,7 @@
             }
         }
     },
-    "last.imagePath": "/Users/shanessapeiris/Documents/Sixth Form/Y13/Computer Science/KET/elemental_project/assets/images/Background",
+    "last.imagePath": "/Users/shanessapeiris/Documents/Sixth Form/Y13/Computer Science/KET/elemental_project/assets/images/Terrain",
     "map.height": 23,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
