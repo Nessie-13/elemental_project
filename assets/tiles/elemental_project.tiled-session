@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "Sky.tsx",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -58,8 +58,8 @@
             "scale": 1.186015625,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 315.3415453527435,
-                "y": 189.28924313286345
+                "x": 314.49838614057046,
+                "y": 189.28924313286342
             }
         }
     },
@@ -87,12 +87,12 @@
         "Earth terrain.tsx",
         "Extra Plants.tsx",
         "More Grassland.tsx",
-        "Sky.tsx",
-        "Foreground.tsx",
-        "Hills.tsx",
-        "Sky Complete.tsx",
-        "Big Mountain.tsx",
         "level-e01.tmx",
+        "Big Mountain.tsx",
+        "Sky Complete.tsx",
+        "Hills.tsx",
+        "Foreground.tsx",
+        "Sky.tsx",
         "elemental_project.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
