@@ -3,9 +3,10 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Sky.tsx",
+    "activeFile": "level-e05.tmx",
     "expandedProjectPaths": [
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "Big Mountain.tsx": {
             "scaleInDock": 1,
@@ -17,6 +18,7 @@
             "scaleInEditor": 1
         },
         "Extra Plants.tsx": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -55,11 +57,55 @@
             "scaleInEditor": 1
         },
         "level-e01.tmx": {
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 2.9485,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 319.823639138545,
+                "y": 183.99186026793282
+            }
+        },
+        "level-e02.tmx": {
+            "scale": 0.9755,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 320.86109687339825,
+                "y": 184.00820092260378
+            }
+        },
+        "level-e03.tmx": {
+            "expandedObjectLayers": [
+                9
+            ],
             "scale": 1.186015625,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 314.49838614057046,
-                "y": 189.28924313286342
+                "x": 320.40050062578223,
+                "y": 184.23028785982473
+            }
+        },
+        "level-e04.tmx": {
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 1.186015625,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 320.40050062578223,
+                "y": 184.23028785982473
+            }
+        },
+        "level-e05.tmx": {
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 1.186015625,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 320.40050062578223,
+                "y": 184.23028785982473
             }
         }
     },
@@ -79,7 +125,11 @@
         "Hills.tsx",
         "Sky Complete.tsx",
         "Big Mountain.tsx",
-        "level-e01.tmx"
+        "level-e01.tmx",
+        "level-e02.tmx",
+        "level-e03.tmx",
+        "level-e04.tmx",
+        "level-e05.tmx"
     ],
     "project": "elemental_project.tiled-project",
     "recentFiles": [
@@ -87,13 +137,14 @@
         "Earth terrain.tsx",
         "Extra Plants.tsx",
         "More Grassland.tsx",
-        "level-e01.tmx",
-        "Big Mountain.tsx",
-        "Sky Complete.tsx",
-        "Hills.tsx",
-        "Foreground.tsx",
         "Sky.tsx",
-        "elemental_project.tsx"
+        "Foreground.tsx",
+        "Hills.tsx",
+        "Sky Complete.tsx",
+        "Big Mountain.tsx",
+        "level-e01.tmx",
+        "level-e02.tmx",
+        "level-e03.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

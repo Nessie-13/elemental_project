@@ -4,10 +4,13 @@ import 'package:flame/game.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+//Window, set to landscape 
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Flame.device.fullScreen();
-  Flame.device.setLandscape();
+
+//using the await allows us to make sure that the game is loaded, set to landscape and then the joystick is loaded
+  await Flame.device.fullScreen();
+  await Flame.device.setLandscape();
 
   ElementalProject game = ElementalProject();
   runApp(
