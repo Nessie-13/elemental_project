@@ -1,11 +1,10 @@
 import 'dart:async';
-import 'dart:ui';
 
-import 'package:elemental_project/avatars/player.dart';
+import 'package:elemental_project/components/player.dart';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
-import 'package:elemental_project/earth_levels/earth.dart';
+import 'package:elemental_project/components/earth.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/painting.dart';
 
@@ -17,7 +16,7 @@ class ElementalProject extends FlameGame
   late final CameraComponent cam;
   Player player = Player(character: 'Mask Dude');
   late JoystickComponent joystick;
-  bool showJoystick = true;
+  bool showJoystick = false;
 
   @override
   FutureOr<void> onLoad() async {
@@ -27,7 +26,7 @@ class ElementalProject extends FlameGame
 //passing our player into the level
     final world = Earth1(
       player: player,
-      levelName: 'level-e04',
+      levelName: 'level-e01',
     );
 
     cam = CameraComponent.withFixedResolution(
@@ -42,7 +41,6 @@ class ElementalProject extends FlameGame
     }
     return super.onLoad();
   }
-
 
   @override
   void update(double dt) {
@@ -77,17 +75,17 @@ class ElementalProject extends FlameGame
       case JoystickDirection.left:
       case JoystickDirection.upLeft:
       case JoystickDirection.downLeft:
-        player.playerDirection = PlayerDirection.left;
+        player.horizontalMovement = -1;
         break;
       case JoystickDirection.right:
       case JoystickDirection.upRight:
       case JoystickDirection.downRight:
-        player.playerDirection = PlayerDirection.right;
+        player.horizontalMovement = 1;
         break;
 
       default:
         //idle
-        player.playerDirection = PlayerDirection.none;
+        player.horizontalMovement = 0;
         break;
     }
   }

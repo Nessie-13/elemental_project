@@ -198,6 +198,5 @@
  </layer>
  <objectgroup id="9" name="Spawnpoints">
   <object id="2" name="Player" type="Player" x="240.47" y="128.39" width="31.9228" height="31.4568"/>
-  <object id="3" x="596.617" y="164.018"/>
  </objectgroup>
 </map>

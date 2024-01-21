@@ -2,14 +2,14 @@
 
 import 'dart:async';
 
+import 'package:elemental_project/components/collision_block.dart';
+import 'package:elemental_project/components/utils.dart';
 import 'package:elemental_project/elemental_project.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
 
 //to actually use the animation, use enum whihc is the player state
 enum PlayerState { idle, running }
-
-enum PlayerDirection { left, right, none }
 
 //using a sprite animation group component to allow the avatar to move in all directions and even be idle
 class Player extends SpriteAnimationGroupComponent
@@ -19,7 +19,9 @@ class Player extends SpriteAnimationGroupComponent
         KeyboardHandler {
   String character;
   //default avatar if nothing is passed through
-  Player({position, this.character = 'Ninja Frog',
+  Player({
+    position,
+    this.character = 'Ninja Frog',
   }) : super(position: position);
 
   late final SpriteAnimation idleAnimation;
@@ -29,44 +31,46 @@ class Player extends SpriteAnimationGroupComponent
   final double stepTime = 0.05;
 
 //move speed, velocity and direction
-  PlayerDirection playerDirection = PlayerDirection.none;
+  double horizontalMovement = 0;
   double moveSpeed = 100;
   Vector2 velocity = Vector2.zero();
-//boolean to check whether the avatar is facing right
-  bool isFacingRight = true;
+  List<CollisionBlock> collisionBlocks = [];
 
 //calling upon our onload
   @override
   FutureOr<void> onLoad() {
     _loadAllAnimation();
-    //underscore means that it is a private method
-    //method allows for code to be kept neatly without having to add everything to the onLoad event
+    debugMode = true;
+
     //method will be called by onLoad
     return super.onLoad();
   }
 
   @override
   void update(double dt) {
+    _updatePlayerState();
     _updatePlayerMovement(dt);
+    _checkHorizontalCollisions();
     super.update(dt);
   }
 
   @override
+  //starting point is 0
+  //if press left we add -1
+  //if press right add 1
+  //if both are pressed, -1 + 1 = 0, so idle
   bool onKeyEvent(RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
+    horizontalMovement = 0;
     final isLeftKeyPressed = keysPressed.contains(LogicalKeyboardKey.keyA) ||
         keysPressed.contains(LogicalKeyboardKey.arrowLeft);
     final isLRightKeyPressed = keysPressed.contains(LogicalKeyboardKey.keyD) ||
         keysPressed.contains(LogicalKeyboardKey.arrowRight);
 
-    if (isLeftKeyPressed && isLRightKeyPressed) {
-      playerDirection = PlayerDirection.none;
-    } else if (isLeftKeyPressed) {
-      playerDirection = PlayerDirection.left;
-    } else if (isLRightKeyPressed) {
-      playerDirection = PlayerDirection.right;
-    } else {
-      playerDirection = PlayerDirection.none;
-    }
+//ternerary operatoor is like an if-statement on one line
+//it says if isLeftKeyPressed is true add -1 and if false add 0
+//this is what shortens down the if statements from before
+    horizontalMovement += isLeftKeyPressed ? -1 : 0;
+    horizontalMovement += isLRightKeyPressed ? 1 : 0;
 
     return super.onKeyEvent(event, keysPressed);
   }
@@ -101,36 +105,46 @@ class Player extends SpriteAnimationGroupComponent
     );
   }
 
-//every frame update
-  void _updatePlayerMovement(double dt) {
-    double dirX = 0.0;
-    switch (playerDirection) {
-      case PlayerDirection.left:
-//if statement  turning direction of avatar left
-        if (isFacingRight) {
-          flipHorizontallyAroundCenter();
-          isFacingRight = false;
-        }
-        current = PlayerState.running;
-        dirX -= moveSpeed;
-        break;
-      case PlayerDirection.right:
-        //if statement turning direction of avatar right
-        if (!isFacingRight) {
-          flipHorizontallyAroundCenter();
-          isFacingRight = true;
-        }
-        current = PlayerState.running;
-        dirX += moveSpeed;
-        break;
-      case PlayerDirection.none:
-        current = PlayerState.idle;
-        break;
-      default:
+//update player state method
+  void _updatePlayerState() {
+    PlayerState playerState = PlayerState.idle;
+
+    if (velocity.x < 0 && scale.x > 0) {
+      flipHorizontallyAroundCenter();
+    } else if (velocity.x > 0 && scale.x < 0) {
+      flipHorizontallyAroundCenter();
     }
 
-//dt makes sure that the avatar is moving at 100 move speed at all times
-    velocity = Vector2(dirX, 0.0);
-    position += velocity * dt;
+    //check if moving, set running
+    if (velocity.x > 0 || velocity.x < 0) playerState = PlayerState.running;
+
+    current = playerState;
+  }
+
+//every frame update
+  void _updatePlayerMovement(double dt) {
+//this multiplies movement with movespeed
+//if -1, then negative movespeed
+//if 1 then positive movespeed
+    velocity.x = horizontalMovement * moveSpeed;
+    position.x += velocity.x * dt;
+  }
+
+  void _checkHorizontalCollisions() {
+    for (final block in collisionBlocks) {
+      //handle collisions
+      if (!block.isPlatform) {
+        if (checkCollision(this, block)) {
+          if (velocity.x > 0) {
+            velocity.x = 0;
+            position.x = block.x - width;
+          }
+          if (velocity.x < 0) {
+            velocity.x = 0;
+            position.x = block.x + block.width + width;
+          }
+        }
+      }
+    }
   }
 }
