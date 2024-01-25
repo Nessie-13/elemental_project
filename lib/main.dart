@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-//using the await allows us to make sure that the game is loaded, set to landscape and then the joystick is loaded
+//using the await allows us to make sure that the game is loaded,
+// set to landscape and then the joystick is loaded
   await Flame.device.fullScreen();
   await Flame.device.setLandscape();
 

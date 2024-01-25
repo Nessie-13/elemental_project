@@ -17,11 +17,22 @@ class Earth1 extends World {
     level = await TiledComponent.load('$levelName.tmx', Vector2.all(16));
 
     add(level);
+
+    _spawningObjects();
+    _addCollisions();
+
+    return super.onLoad();
+    //super refers to whatever we are extending
+  }
+
+//by using methods, code looks more clean
+//can be hidden using arrows
+  void _spawningObjects() {
     //spawnpoint layer:
     //point at which the avatar will appear
     final spawnPointsLayer = level.tileMap.getLayer<ObjectGroup>('Spawnpoints');
 
-//if statement to check for a null, if null then run
+    //if statement to check for a null, if null then run
     if (spawnPointsLayer != null) {
       for (final spawnPoint in spawnPointsLayer.objects) {
         switch (spawnPoint.class_) {
@@ -33,7 +44,9 @@ class Earth1 extends World {
         }
       }
     }
+  }
 
+  void _addCollisions() {
     //collsions layer:
     final collisionsLayer = level.tileMap.getLayer<ObjectGroup>('Collisions');
 
@@ -63,7 +76,5 @@ class Earth1 extends World {
     }
 
     player.collisionBlocks = collisionBlocks;
-    return super.onLoad();
-    //super refers to whatever we are extending
   }
 }

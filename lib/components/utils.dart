@@ -10,15 +10,14 @@ bool checkCollision(player, block) {
   final blockWidth = block.width;
   final blockHeight = block.height;
 
-  final fixedX = player.scale.x < 0
-      ? playerX - (hitbox.offsetX * 2) - playerWidth
-      : playerX;
+  final fixedX = player.scale.x < 0 ? playerX -  (hitbox.offsetX * 2) - playerWidth : playerX;
+
   //allows the bottom of player to be checked when jumping onto platforms, not the top
   final fixedY = block.isPlatform ? playerY + playerHeight : playerY;
 
-//checking for collisions
-//collisions occur when there are overlaps
-//is the avatar overlapping with the blocks?
+  //checking for collisions
+  //collisions occur when there are overlaps
+  //is the avatar overlapping with the blocks?
 
   return (fixedY < blockY + blockHeight &&
       playerY + playerHeight > blockY &&
