@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:elemental_project/components/coins.dart';
 import 'package:elemental_project/components/collision_block.dart';
 import 'package:elemental_project/components/player.dart';
 import 'package:flame/components.dart';
@@ -40,6 +41,13 @@ class Earth1 extends World {
             player.position = Vector2(spawnPoint.x, spawnPoint.y);
             add(player);
             break;
+          case 'Coins':
+            final coins = Coins(
+              coins: spawnPoint.name,
+              position: Vector2(spawnPoint.x, spawnPoint.y),
+              size: Vector2(spawnPoint.width, spawnPoint.height),
+            );
+            add(coins);
           default:
         }
       }

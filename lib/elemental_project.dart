@@ -10,7 +10,7 @@ import 'package:flutter/painting.dart';
 
 //have the ability for components to handle the keyboard
 class ElementalProject extends FlameGame
-    with HasKeyboardHandlerComponents, DragCallbacks {
+    with HasKeyboardHandlerComponents, DragCallbacks, HasCollisionDetection {
   @override
   Color backgroundColor() => const Color(0xFF211F30);
   late final CameraComponent cam;

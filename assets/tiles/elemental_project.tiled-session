@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-e01.tmx",
+    "activeFile": "level-e02.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -63,19 +63,19 @@
             "scale": 1.2089,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 312.68094962362477,
-                "y": 174.1252378195053
+                "x": 320.125734138473,
+                "y": 184.05161717263624
             }
         },
         "level-e02.tmx": {
             "expandedObjectLayers": [
                 9
             ],
-            "scale": 0.9755,
+            "scale": 2.514,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 321.88621219887233,
-                "y": 184.00820092260378
+                "x": 295.9427207637232,
+                "y": 177.2076372315036
             }
         },
         "level-e03.tmx": {
@@ -107,7 +107,7 @@
             "scale": 0.8178,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 321.5945218879922,
+                "x": 320.37172902910254,
                 "y": 184.03032526290048
             }
         }
@@ -145,9 +145,9 @@
         "Hills.tsx",
         "Sky Complete.tsx",
         "Big Mountain.tsx",
+        "level-e01.tmx",
         "level-e05.tmx",
-        "level-e04.tmx",
-        "level-e03.tmx"
+        "level-e04.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

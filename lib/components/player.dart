@@ -2,8 +2,9 @@
 
 import 'dart:async';
 
+import 'package:elemental_project/components/coins.dart';
 import 'package:elemental_project/components/collision_block.dart';
-import 'package:elemental_project/components/player_hitbox.dart';
+import 'package:elemental_project/components/custom_hitbox.dart';
 import 'package:elemental_project/components/utils.dart';
 import 'package:elemental_project/elemental_project.dart';
 import 'package:flame/collisions.dart';
@@ -18,7 +19,8 @@ class Player extends SpriteAnimationGroupComponent
 //adding keyboard controls
     with
         HasGameRef<ElementalProject>,
-        KeyboardHandler {
+        KeyboardHandler,
+        CollisionCallbacks {
   String character;
   //default avatar if nothing is passed through
   Player({
@@ -44,7 +46,7 @@ class Player extends SpriteAnimationGroupComponent
   bool isOnGround = false;
   bool hasJumped = false;
   List<CollisionBlock> collisionBlocks = [];
-  PlayerHitbox hitbox = PlayerHitbox(
+  CustomHitbox hitbox = CustomHitbox(
     offsetX: 10,
     offsetY: 4,
     width: 14,
@@ -97,6 +99,14 @@ class Player extends SpriteAnimationGroupComponent
         keysPressed.contains(LogicalKeyboardKey.space);
 
     return super.onKeyEvent(event, keysPressed);
+  }
+
+  @override
+  void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
+    //if we collide with something adn it is a coin, then...
+    if (other is Coins) other.collidedWithPlayer();
+    
+    super.onCollision(intersectionPoints, other);
   }
 
   void _loadAllAnimation() {
