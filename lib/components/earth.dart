@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:elemental_project/components/coins.dart';
 import 'package:elemental_project/components/collision_block.dart';
 import 'package:elemental_project/components/player.dart';
+import 'package:elemental_project/components/saw.dart';
 import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 
@@ -48,6 +49,14 @@ class Earth1 extends World {
               size: Vector2(spawnPoint.width, spawnPoint.height),
             );
             add(coins);
+            break;
+          case 'Saw':
+            final saw = Saw(
+              position: Vector2(spawnPoint.x, spawnPoint.y),
+              size: Vector2(spawnPoint.width, spawnPoint.height),
+            );
+            add(saw);
+            break;
           default:
         }
       }

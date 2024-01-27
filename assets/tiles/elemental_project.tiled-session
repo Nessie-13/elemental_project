@@ -135,6 +135,7 @@
         "level-e05.tmx"
     ],
     "project": "elemental_project.tiled-project",
+    "property.type": "float",
     "recentFiles": [
         "General Terrain.tsx",
         "Earth terrain.tsx",
