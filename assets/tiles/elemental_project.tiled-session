@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-e02.tmx",
+    "activeFile": "level-e01.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -60,22 +60,22 @@
             "expandedObjectLayers": [
                 9
             ],
-            "scale": 1.2089,
-            "selectedLayer": 8,
+            "scale": 1.2189,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 320.125734138473,
-                "y": 184.05161717263624
+                "x": 319.55041430798263,
+                "y": 184.18245959471653
             }
         },
         "level-e02.tmx": {
             "expandedObjectLayers": [
                 9
             ],
-            "scale": 2.514,
+            "scale": 1.3645,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 295.9427207637232,
-                "y": 177.2076372315036
+                "x": 319.89739831440085,
+                "y": 184.31659948699158
             }
         },
         "level-e03.tmx": {
@@ -85,7 +85,7 @@
             "scale": 1.186015625,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 320.40050062578223,
+                "x": 319.97892101969563,
                 "y": 184.23028785982473
             }
         },
@@ -96,7 +96,7 @@
             "scale": 1.186015625,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 320.40050062578223,
+                "x": 319.97892101969563,
                 "y": 184.23028785982473
             }
         },
@@ -107,7 +107,7 @@
             "scale": 0.8178,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 320.37172902910254,
+                "x": 320.9831254585473,
                 "y": 184.03032526290048
             }
         }
@@ -146,9 +146,9 @@
         "Hills.tsx",
         "Sky Complete.tsx",
         "Big Mountain.tsx",
-        "level-e01.tmx",
         "level-e05.tmx",
-        "level-e04.tmx"
+        "level-e04.tmx",
+        "level-e03.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

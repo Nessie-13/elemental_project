@@ -4,7 +4,7 @@ import 'package:flame/game.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-//Window, set to landscape 
+//Window, set to landscape
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 

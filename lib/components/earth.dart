@@ -51,7 +51,16 @@ class Earth1 extends World {
             add(coins);
             break;
           case 'Saw':
+            //grabbing the values of isVertical, offNeg and offPos:
+            final isVertical = spawnPoint.properties.getValue('isVertical');
+            final offNeg = spawnPoint.properties.getValue('offNeg');
+            final offPos = spawnPoint.properties.getValue('offPos');
+
             final saw = Saw(
+              //passing in isVertical, offNeg, and offPos: 
+              isVertical: isVertical,
+              offNeg: offNeg,
+              offPos: offPos,
               position: Vector2(spawnPoint.x, spawnPoint.y),
               size: Vector2(spawnPoint.width, spawnPoint.height),
             );
