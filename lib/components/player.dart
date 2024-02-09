@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:elemental_project/components/coins.dart';
 import 'package:elemental_project/components/collision_block.dart';
 import 'package:elemental_project/components/custom_hitbox.dart';
+import 'package:elemental_project/components/saw.dart';
 import 'package:elemental_project/components/utils.dart';
 import 'package:elemental_project/elemental_project.dart';
 import 'package:flame/collisions.dart';
@@ -12,7 +13,7 @@ import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
 
 //to actually use the animation, use enum whihc is the player state
-enum PlayerState { idle, running, jumping, falling }
+enum PlayerState { idle, running, jumping, falling, hit, appearing }
 
 //using a sprite animation group component to allow the avatar to move in all directions and even be idle
 class Player extends SpriteAnimationGroupComponent
@@ -34,6 +35,8 @@ class Player extends SpriteAnimationGroupComponent
   late final SpriteAnimation runningAnimation;
   late final SpriteAnimation jumpingAnimation;
   late final SpriteAnimation fallingAnimation;
+  late final SpriteAnimation hitAnimmation;
+  late final SpriteAnimation appearingAnimation;
 
   final double _gravity = 9.8;
   final double _jumpForce = 260;
@@ -42,9 +45,11 @@ class Player extends SpriteAnimationGroupComponent
   //move speed, velocity and direction
   double horizontalMovement = 0;
   double moveSpeed = 100;
+  Vector2 startingPosition = Vector2.zero();
   Vector2 velocity = Vector2.zero();
   bool isOnGround = false;
   bool hasJumped = false;
+  bool gotHit = false;
   List<CollisionBlock> collisionBlocks = [];
   CustomHitbox hitbox = CustomHitbox(
     offsetX: 10,
@@ -58,6 +63,8 @@ class Player extends SpriteAnimationGroupComponent
   FutureOr<void> onLoad() {
     _loadAllAnimation();
     //debugMode = true;
+
+    startingPosition = Vector2(position.x, position.y);
     add(RectangleHitbox(
       position: Vector2(hitbox.offsetX, hitbox.offsetY),
       size: Vector2(hitbox.width, hitbox.height),
@@ -69,11 +76,14 @@ class Player extends SpriteAnimationGroupComponent
   //update function, checking each method chronologically
   @override
   void update(double dt) {
-    _updatePlayerState();
-    _updatePlayerMovement(dt);
-    _checkHorizontalCollisions();
-    _applyGravity(dt);
-    _checkVerticalCollisions();
+    if (!gotHit) {
+      _updatePlayerState();
+      _updatePlayerMovement(dt);
+      _checkHorizontalCollisions();
+      _applyGravity(dt);
+      _checkVerticalCollisions();
+    }
+
     super.update(dt);
   }
 
@@ -105,7 +115,8 @@ class Player extends SpriteAnimationGroupComponent
   void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
     //if we collide with something adn it is a coin, then...
     if (other is Coins) other.collidedWithPlayer();
-    
+    if (other is Saw) _respawn();
+
     super.onCollision(intersectionPoints, other);
   }
 
@@ -115,6 +126,8 @@ class Player extends SpriteAnimationGroupComponent
     runningAnimation = _spriteAnimation('Run', 12);
     jumpingAnimation = _spriteAnimation('Jump', 1);
     fallingAnimation = _spriteAnimation('Fall', 1);
+    hitAnimmation = _spriteAnimation('Hit', 7);
+    appearingAnimation = _specialSpriteAnimation('Appearing', 7);
 
     //list of all animations
     animations = {
@@ -122,6 +135,8 @@ class Player extends SpriteAnimationGroupComponent
       PlayerState.running: runningAnimation,
       PlayerState.jumping: jumpingAnimation,
       PlayerState.falling: fallingAnimation,
+      PlayerState.hit: hitAnimmation,
+      PlayerState.appearing: appearingAnimation,
     };
 
     //set current animation
@@ -139,6 +154,20 @@ class Player extends SpriteAnimationGroupComponent
         stepTime: 0.05,
         //dimensions of avatar image
         textureSize: Vector2.all(32),
+      ),
+    );
+  }
+
+  SpriteAnimation _specialSpriteAnimation(String state, int amount) {
+    return SpriteAnimation.fromFrameData(
+      game.images.fromCache('Main Characters/$state (96x96).png'),
+      SpriteAnimationData.sequenced(
+        //number of pictures in image
+        amount: amount,
+        //50milliseconds or 20FPS
+        stepTime: 0.05,
+        //dimensions of avatar image
+        textureSize: Vector2.all(96),
       ),
     );
   }
@@ -234,5 +263,25 @@ class Player extends SpriteAnimationGroupComponent
         }
       }
     }
+  }
+
+  void _respawn() {
+    const hitDuration = Duration(milliseconds: 350);
+    const appearingDuration = Duration(milliseconds: 350);
+    const canMoveDuration = Duration(milliseconds: 400);
+    gotHit = true;
+    current = PlayerState.hit;
+    Future.delayed(hitDuration, () {
+      scale.x = 1;
+      //when hit moves player to start
+      position = startingPosition - Vector2.all(32);
+      current = PlayerState.appearing;
+      Future.delayed(appearingDuration, () {
+        velocity = Vector2.zero();
+        position = startingPosition;
+        _updatePlayerState();
+        Future.delayed(canMoveDuration, () => gotHit = false);
+      });
+    });
   }
 }

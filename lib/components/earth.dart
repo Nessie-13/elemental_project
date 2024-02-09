@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:elemental_project/components/checkpoint.dart';
 import 'package:elemental_project/components/coins.dart';
 import 'package:elemental_project/components/collision_block.dart';
 import 'package:elemental_project/components/player.dart';
@@ -57,7 +58,7 @@ class Earth1 extends World {
             final offPos = spawnPoint.properties.getValue('offPos');
 
             final saw = Saw(
-              //passing in isVertical, offNeg, and offPos: 
+              //passing in isVertical, offNeg, and offPos:
               isVertical: isVertical,
               offNeg: offNeg,
               offPos: offPos,
@@ -65,6 +66,13 @@ class Earth1 extends World {
               size: Vector2(spawnPoint.width, spawnPoint.height),
             );
             add(saw);
+            break;
+          case 'checkpoint':
+            final checkpoint = Checkpoint(
+              position: Vector2(spawnPoint.x, spawnPoint.y),
+              size: Vector2(spawnPoint.width, spawnPoint.height),
+            );
+            add(checkpoint);
             break;
           default:
         }

@@ -60,11 +60,11 @@
             "expandedObjectLayers": [
                 9
             ],
-            "scale": 1.2189,
+            "scale": 1.4411,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 319.55041430798263,
-                "y": 184.18245959471653
+                "x": 319.5475678301297,
+                "y": 180.07077926583855
             }
         },
         "level-e02.tmx": {
@@ -119,15 +119,6 @@
     "map.tileWidth": 16,
     "map.width": 40,
     "openFiles": [
-        "General Terrain.tsx",
-        "Earth terrain.tsx",
-        "Extra Plants.tsx",
-        "More Grassland.tsx",
-        "Sky.tsx",
-        "Foreground.tsx",
-        "Hills.tsx",
-        "Sky Complete.tsx",
-        "Big Mountain.tsx",
         "level-e01.tmx",
         "level-e02.tmx",
         "level-e03.tmx",
@@ -137,18 +128,18 @@
     "project": "elemental_project.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "General Terrain.tsx",
-        "Earth terrain.tsx",
-        "Extra Plants.tsx",
-        "More Grassland.tsx",
-        "Sky.tsx",
-        "Foreground.tsx",
-        "Hills.tsx",
-        "Sky Complete.tsx",
-        "Big Mountain.tsx",
         "level-e05.tmx",
         "level-e04.tmx",
-        "level-e03.tmx"
+        "level-e03.tmx",
+        "level-e02.tmx",
+        "level-e01.tmx",
+        "Big Mountain.tsx",
+        "Sky Complete.tsx",
+        "Hills.tsx",
+        "Foreground.tsx",
+        "Sky.tsx",
+        "More Grassland.tsx",
+        "Extra Plants.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

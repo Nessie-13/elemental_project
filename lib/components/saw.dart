@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:elemental_project/elemental_project.dart';
+import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 
 class Saw extends SpriteAnimationComponent with HasGameRef<ElementalProject> {
@@ -27,6 +28,8 @@ class Saw extends SpriteAnimationComponent with HasGameRef<ElementalProject> {
 
   @override
   FutureOr<void> onLoad() {
+    add(CircleHitbox());
+
     if (isVertical) {
       rangeNeg = position.y - offNeg * tileSize;
       rangePos = position.y + offPos * tileSize;
