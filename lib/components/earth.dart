@@ -41,6 +41,7 @@ class Earth1 extends World {
         switch (spawnPoint.class_) {
           case 'Player':
             player.position = Vector2(spawnPoint.x, spawnPoint.y);
+            player.scale.x = 1;
             add(player);
             break;
           case 'Coins':
@@ -67,7 +68,7 @@ class Earth1 extends World {
             );
             add(saw);
             break;
-          case 'checkpoint':
+          case 'Checkpoint':
             final checkpoint = Checkpoint(
               position: Vector2(spawnPoint.x, spawnPoint.y),
               size: Vector2(spawnPoint.width, spawnPoint.height),
