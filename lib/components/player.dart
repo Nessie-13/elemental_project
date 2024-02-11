@@ -148,7 +148,7 @@ class Player extends SpriteAnimationGroupComponent
     runningAnimation = _spriteAnimation('Run', 12);
     jumpingAnimation = _spriteAnimation('Jump', 1);
     fallingAnimation = _spriteAnimation('Fall', 1);
-    hitAnimmation = _spriteAnimation('Hit', 7);
+    hitAnimmation = _spriteAnimation('Hit', 7)..loop = false;
     appearingAnimation = _specialSpriteAnimation('Appearing', 7);
     disappearingAnimation = _specialSpriteAnimation('Disappearing', 7);
 
@@ -192,6 +192,7 @@ class Player extends SpriteAnimationGroupComponent
         stepTime: 0.05,
         //dimensions of avatar image
         textureSize: Vector2.all(96),
+        loop: false,
       ),
     );
   }
@@ -289,24 +290,29 @@ class Player extends SpriteAnimationGroupComponent
     }
   }
 
-  void _respawn() {
-    const hitDuration = Duration(milliseconds: 350);
-    const appearingDuration = Duration(milliseconds: 350);
+  void _respawn() async {
+    //removed the delays to use the built-in fucntion, avoids complicated math
     const canMoveDuration = Duration(milliseconds: 400);
     gotHit = true;
     current = PlayerState.hit;
-    Future.delayed(hitDuration, () {
-      scale.x = 1;
-      //when hit moves player to start
-      position = startingPosition - Vector2.all(32);
-      current = PlayerState.appearing;
-      Future.delayed(appearingDuration, () {
-        velocity = Vector2.zero();
-        position = startingPosition;
-        _updatePlayerState();
-        Future.delayed(canMoveDuration, () => gotHit = false);
-      });
-    });
+
+    //wait for animationTicker, only once it is complete,
+    //rest of code will run
+    await animationTicker?.completed;
+    animationTicker?.reset();
+
+    scale.x = 1;
+    //when hit moves player to start
+    position = startingPosition - Vector2.all(32);
+    current = PlayerState.appearing;
+
+    await animationTicker?.completed;
+    animationTicker?.reset();
+
+    velocity = Vector2.zero();
+    position = startingPosition;
+    _updatePlayerState();
+    Future.delayed(canMoveDuration, () => gotHit = false);
   }
 
   void _reachedCheckpoint() {

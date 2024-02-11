@@ -4,6 +4,7 @@ import 'package:elemental_project/components/custom_hitbox.dart';
 import 'package:elemental_project/elemental_project.dart';
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
+import 'package:flutter/widgets.dart';
 
 class Coins extends SpriteAnimationComponent
     with HasGameRef<ElementalProject>, CollisionCallbacks {
@@ -17,7 +18,6 @@ class Coins extends SpriteAnimationComponent
           size: size,
         );
 
-  bool _collected = false;
   //hitbox for coins, reducing the width and height around them,
   //making the hitbox closer to the coin
   final double stepTime = 0.05;
@@ -49,27 +49,18 @@ class Coins extends SpriteAnimationComponent
     return super.onLoad();
   }
 
-  void collidedWithPlayer() {
-    //not collected coin yet
-    if (!_collected) {
-      animation = SpriteAnimation.fromFrameData(
-        game.images.fromCache('Items/Coins/Collected.png'),
-        SpriteAnimationData.sequenced(
-          amount: 6,
-          stepTime: stepTime,
-          textureSize: Vector2.all(32),
-          loop: false,
-        ),
-      );
-      //collected animation plays even if standing on it
-      _collected = true;
-    }
-    Future.delayed(
-      //a delay so that the last animation payne is removed 
-      //delay for 400 milliseconds
-      //then remove the coin from the screen
-      const Duration(milliseconds: 400),
-      () => removeFromParent(),
+  void collidedWithPlayer() async {
+    animation = SpriteAnimation.fromFrameData(
+      game.images.fromCache('Items/Coins/Collected.png'),
+      SpriteAnimationData.sequenced(
+        amount: 6,
+        stepTime: stepTime,
+        textureSize: Vector2.all(32),
+        loop: false,
+      ),
     );
+
+    await animationTicker?.completed;
+    removeFromParent();
   }
 }
