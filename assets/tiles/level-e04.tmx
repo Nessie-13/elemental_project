@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="4">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="33">
  <tileset firstgid="1" source="General Terrain.tsx"/>
  <tileset firstgid="243" source="Sky.tsx"/>
  <tileset firstgid="477" source="Sky Complete.tsx"/>
@@ -180,16 +180,16 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,50,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,7,8,8,8,8,8,9,0,0,0,0,0,0,50,50,50,50,72,72,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,29,30,30,30,31,0,50,50,50,50,50,50,72,72,72,72,94,94,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,29,30,50,50,50,72,72,72,72,72,72,94,94,94,94,116,116,94,0,0,0,40,41,42,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,51,30,30,52,53,0,50,50,50,50,50,50,72,72,72,72,94,94,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,29,31,50,50,50,72,72,72,72,72,72,94,94,94,94,116,116,94,0,0,0,40,41,42,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,50,51,53,72,72,72,94,94,94,94,94,94,116,116,116,116,138,138,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,72,72,72,94,94,94,116,116,116,116,116,116,138,138,138,138,0,138,40,41,42,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,94,94,94,116,116,116,138,138,138,138,138,138,0,0,0,0,0,138,138,50,50,50,50,50,50,0,0,0,0,0,0,0,0,
-0,0,0,0,0,7,50,116,116,116,138,138,138,50,50,50,50,50,50,50,50,40,41,42,138,72,50,50,50,50,50,50,50,50,50,0,0,0,0,0,
-0,0,0,0,0,29,9,138,138,138,72,72,72,72,72,72,72,72,72,72,743,72,72,72,138,94,72,72,72,72,72,72,72,72,72,0,0,0,0,0,
-0,0,0,0,0,29,8,9,28,94,94,94,94,94,7,8,8,8,8,9,763,94,94,94,138,116,94,94,94,94,94,94,94,94,94,0,0,0,0,0,
-0,0,0,0,0,29,30,30,32,33,32,33,32,33,30,30,30,30,30,31,783,116,116,116,138,138,116,116,116,116,116,116,116,116,116,0,0,0,0,0,
-0,0,0,0,0,51,52,52,52,52,52,52,52,52,52,52,52,52,52,53,803,138,138,138,138,138,138,138,138,138,138,138,138,138,138,0,0,0,0,0,
+0,0,0,0,0,0,0,732,733,734,116,116,116,138,138,138,740,741,742,0,0,0,0,0,138,138,50,50,50,50,50,50,0,0,0,0,0,0,0,0,
+0,0,0,0,0,7,9,752,753,754,138,876,877,878,879,50,760,761,762,50,50,40,41,42,138,72,50,50,50,50,50,50,50,50,50,0,0,0,0,0,
+0,0,0,0,0,29,31,772,773,774,812,886,887,888,889,812,780,781,782,72,743,72,72,72,138,94,72,72,72,72,72,72,72,72,72,0,0,0,0,0,
+0,0,0,0,0,29,8,8,8,8,8,8,8,8,8,8,8,8,9,72,763,94,94,94,138,116,94,94,94,94,94,94,94,94,94,0,0,0,0,0,
+0,0,0,0,0,29,30,30,32,33,32,33,32,33,30,30,30,30,31,72,783,116,116,116,138,138,116,116,116,116,116,116,116,116,116,0,0,0,0,0,
+0,0,0,0,0,51,52,52,52,52,52,52,52,52,52,52,52,52,53,72,803,138,138,138,138,138,138,138,138,138,138,138,138,138,138,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -197,8 +197,55 @@
 </data>
  </layer>
  <objectgroup id="9" name="Spawnpoints">
-  <object id="2" name="Player" type="Player" x="472.339" y="128.39" width="31.9228" height="31.4568"/>
+  <object id="2" name="Player" type="Player" x="176" y="96" width="31.9228" height="31.4568"/>
   <object id="3" x="596.617" y="164.018"/>
+  <object id="13" name="Saw H" type="Saw" x="368" y="288" width="32" height="32">
+   <properties>
+    <property name="isVertical" type="bool" value="false"/>
+    <property name="offNeg" type="float" value="0"/>
+    <property name="offPos" type="float" value="2"/>
+   </properties>
+  </object>
+  <object id="15" name="Saw H" type="Saw" x="432" y="288" width="32" height="32">
+   <properties>
+    <property name="isVertical" type="bool" value="false"/>
+    <property name="offNeg" type="float" value="0"/>
+    <property name="offPos" type="float" value="2"/>
+   </properties>
+  </object>
+  <object id="17" name="Saw H" type="Saw" x="496" y="288" width="32" height="32">
+   <properties>
+    <property name="isVertical" type="bool" value="false"/>
+    <property name="offNeg" type="float" value="0"/>
+    <property name="offPos" type="float" value="2"/>
+   </properties>
+  </object>
+  <object id="19" name="Saw H" type="Saw" x="304" y="288" width="32" height="32">
+   <properties>
+    <property name="isVertical" type="bool" value="false"/>
+    <property name="offNeg" type="float" value="0"/>
+    <property name="offPos" type="float" value="2"/>
+   </properties>
+  </object>
+  <object id="20" name="coin" type="Coins" x="352" y="208" width="16" height="16"/>
+  <object id="21" name="coin" type="Coins" x="416" y="176" width="16" height="16"/>
+  <object id="22" name="coin" type="Coins" x="480" y="144" width="16" height="16"/>
+  <object id="25" name="coin" type="Coins" x="128" y="112" width="16" height="16"/>
+  <object id="26" name="coin" type="Coins" x="224" y="240" width="16" height="16"/>
+  <object id="27" name="Checkpoint" type="Checkpoint" x="112" y="192" width="64" height="64"/>
  </objectgroup>
- <objectgroup id="11" name="Collisions"/>
+ <objectgroup id="11" name="Collisions">
+  <object id="4" x="80" y="48" width="496" height="16"/>
+  <object id="5" x="64" y="48" width="16" height="256"/>
+  <object id="6" x="64" y="304" width="496" height="16"/>
+  <object id="7" x="560" y="64" width="16" height="256"/>
+  <object id="9" x="128" y="160" width="32" height="32"/>
+  <object id="10" x="112" y="144" width="80" height="16"/>
+  <object id="11" x="96" y="128" width="112" height="16"/>
+  <object id="28" x="80" y="224" width="32" height="80"/>
+  <object id="29" x="112" y="256" width="192" height="48"/>
+  <object id="30" type="Platform" x="336" y="224" width="48" height="16"/>
+  <object id="31" type="Platform" x="400" y="192" width="48" height="16"/>
+  <object id="32" type="Platform" x="464" y="160" width="48" height="16"/>
+ </objectgroup>
 </map>

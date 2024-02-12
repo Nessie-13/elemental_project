@@ -25,7 +25,7 @@ class ElementalProject extends FlameGame
   bool showControls = false;
   bool playSounds = true;
   double soundVolume = 1.0;
-  List<String> levelNames = ['level-e01', 'level-e02', 'level-e03'];
+  List<String> levelNames = ['level-e01', 'level-e02', 'level-e03', 'level-e04','level-e05'];
   int currentLevelIndex = 0;
 
   @override
