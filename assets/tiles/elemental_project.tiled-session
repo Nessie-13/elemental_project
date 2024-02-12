@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-e01.tmx",
+    "activeFile": "level-e02.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -58,35 +58,38 @@
         },
         "level-e01.tmx": {
             "expandedObjectLayers": [
-                9
+                9,
+                10
             ],
-            "scale": 1.2239,
+            "scale": 1.9245,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 319.062014870496,
-                "y": 179.3447177056949
+                "x": 202.65003897116136,
+                "y": 197.19407638347624
             }
         },
         "level-e02.tmx": {
             "expandedObjectLayers": [
-                9
+                9,
+                10
             ],
-            "scale": 1.3645,
+            "scale": 1.3633,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 319.89739831440085,
-                "y": 184.31659948699158
+                "x": 320.5457346145383,
+                "y": 151.47069610503925
             }
         },
         "level-e03.tmx": {
             "expandedObjectLayers": [
-                9
+                9,
+                10
             ],
-            "scale": 1.186015625,
+            "scale": 1.3531,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 319.97892101969563,
-                "y": 184.23028785982473
+                "x": 311.87643189712514,
+                "y": 218.38740669573573
             }
         },
         "level-e04.tmx": {
@@ -94,9 +97,9 @@
                 9
             ],
             "scale": 1.186015625,
-            "selectedLayer": 2,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 319.97892101969563,
+                "x": 319.55734141360915,
                 "y": 184.23028785982473
             }
         },
@@ -105,9 +108,9 @@
                 9
             ],
             "scale": 0.8178,
-            "selectedLayer": 6,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 320.9831254585473,
+                "x": 321.5945218879922,
                 "y": 184.03032526290048
             }
         }
@@ -128,11 +131,11 @@
     "project": "elemental_project.tiled-project",
     "property.type": "float",
     "recentFiles": [
+        "level-e01.tmx",
         "level-e05.tmx",
         "level-e04.tmx",
         "level-e03.tmx",
         "level-e02.tmx",
-        "level-e01.tmx",
         "Big Mountain.tsx",
         "Sky Complete.tsx",
         "Hills.tsx",

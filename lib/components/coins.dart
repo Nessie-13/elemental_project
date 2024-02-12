@@ -4,7 +4,7 @@ import 'package:elemental_project/components/custom_hitbox.dart';
 import 'package:elemental_project/elemental_project.dart';
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flame_audio/flame_audio.dart';
 
 class Coins extends SpriteAnimationComponent
     with HasGameRef<ElementalProject>, CollisionCallbacks {
@@ -27,6 +27,8 @@ class Coins extends SpriteAnimationComponent
     width: 10,
     height: 16,
   );
+  bool collected = false;
+
   @override
   FutureOr<void> onLoad() {
     //debugMode = true;
@@ -50,17 +52,21 @@ class Coins extends SpriteAnimationComponent
   }
 
   void collidedWithPlayer() async {
-    animation = SpriteAnimation.fromFrameData(
-      game.images.fromCache('Items/Coins/Collected.png'),
-      SpriteAnimationData.sequenced(
-        amount: 6,
-        stepTime: stepTime,
-        textureSize: Vector2.all(32),
-        loop: false,
-      ),
-    );
+    if (!collected) {
+      collected = true;
+      if (game.playSounds) FlameAudio.play('pickupCoin.wav', volume: game.soundVolume);
+      animation = SpriteAnimation.fromFrameData(
+        game.images.fromCache('Items/Coins/Collected.png'),
+        SpriteAnimationData.sequenced(
+          amount: 6,
+          stepTime: stepTime,
+          textureSize: Vector2.all(32),
+          loop: false,
+        ),
+      );
 
-    await animationTicker?.completed;
-    removeFromParent();
+      await animationTicker?.completed;
+      removeFromParent();
+    }
   }
 }

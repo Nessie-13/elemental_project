@@ -22,19 +22,17 @@ class ElementalProject extends FlameGame
   late CameraComponent cam;
   Player player = Player(character: 'Mask Dude');
   late JoystickComponent joystick;
-  bool showControls = true;
-  List<String> levelNames = ['level-e01', 'level-e01'];
+  bool showControls = false;
+  bool playSounds = true;
+  double soundVolume = 1.0;
+  List<String> levelNames = ['level-e01', 'level-e02', 'level-e03'];
   int currentLevelIndex = 0;
 
   @override
   FutureOr<void> onLoad() async {
     //Load all images into cache
     await images.loadAllImages();
-    List questions = await loadCSV() ; 
-
-
-    
-
+    List questions = await loadCSV();
 
 //passing our player into the level method
 
@@ -98,6 +96,7 @@ class ElementalProject extends FlameGame
 
   void loadNextLevel() {
     removeWhere((component) => component is Earth1);
+
     if (currentLevelIndex < levelNames.length - 1) {
       currentLevelIndex++;
       _loadLevel();
