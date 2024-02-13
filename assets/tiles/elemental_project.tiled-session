@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-e02.tmx",
+    "activeFile": "level-e05.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -110,7 +110,7 @@
                 10
             ],
             "scale": 1.2968,
-            "selectedLayer": 8,
+            "selectedLayer": 6,
             "viewCenter": {
                 "x": 324.64528069093154,
                 "y": 210.90376310919186
@@ -134,10 +134,10 @@
     "property.type": "float",
     "recentFiles": [
         "level-e01.tmx",
-        "level-e05.tmx",
-        "level-e04.tmx",
-        "level-e03.tmx",
         "level-e02.tmx",
+        "level-e03.tmx",
+        "level-e04.tmx",
+        "level-e05.tmx",
         "Big Mountain.tsx",
         "Sky Complete.tsx",
         "Hills.tsx",

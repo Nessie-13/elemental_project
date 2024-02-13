@@ -17,6 +17,7 @@ class ElementalProject extends FlameGame
         DragCallbacks,
         HasCollisionDetection,
         TapCallbacks {
+          
   @override
   Color backgroundColor() => const Color(0xFF211F30);
   late CameraComponent cam;
