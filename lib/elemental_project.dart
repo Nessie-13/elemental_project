@@ -17,7 +17,6 @@ class ElementalProject extends FlameGame
         DragCallbacks,
         HasCollisionDetection,
         TapCallbacks {
-          
   @override
   Color backgroundColor() => const Color(0xFF211F30);
   late CameraComponent cam;
@@ -39,6 +38,7 @@ class ElementalProject extends FlameGame
   FutureOr<void> onLoad() async {
     //Load all images into cache
     await images.loadAllImages();
+    // ignore: unused_local_variable
     List questions = await loadCSV();
 
 //passing our player into the level method
