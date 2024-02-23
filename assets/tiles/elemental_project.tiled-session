@@ -39,7 +39,7 @@
         },
         "General Terrain.tsx": {
             "dynamicWrapping": true,
-            "scaleInDock": 1,
+            "scaleInDock": 1.034,
             "scaleInEditor": 1
         },
         "Hills.tsx": {
@@ -93,7 +93,7 @@
             "scale": 1.132578125,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 411.89211561012627,
+                "x": 412.7750569083259,
                 "y": 231.33062012830243
             }
         },
@@ -117,7 +117,7 @@
             "scale": 1.132578125,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 412.7750569083259,
+                "x": 413.6579982065255,
                 "y": 231.33062012830243
             }
         },
@@ -127,9 +127,9 @@
                 10
             ],
             "scale": 1.132578125,
-            "selectedLayer": 8,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 412.7750569083259,
+                "x": 413.6579982065255,
                 "y": 231.33062012830243
             }
         },
@@ -138,11 +138,11 @@
                 9,
                 10
             ],
-            "scale": 1.132578125,
-            "selectedLayer": 8,
+            "scale": 1.5323,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 412.7750569083259,
-                "y": 231.33062012830243
+                "x": 286.17111531684395,
+                "y": 221.23605038177902
             }
         },
         "level-e01.tmx": {
@@ -165,8 +165,8 @@
             "scale": 1.3633,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 319.8122203476858,
-                "y": 184.47883811340134
+                "x": 320.17897748111204,
+                "y": 184.84559524682754
             }
         },
         "level-e03.tmx": {
@@ -201,8 +201,8 @@
             "scale": 1.2968,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 404.4571252313387,
-                "y": 252.15916101172115
+                "x": 375.1542257865515,
+                "y": 207.4336829117829
             }
         },
         "level-f01.tmx": {
@@ -225,7 +225,7 @@
             "scale": 1.132578125,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 412.7750569083259,
+                "x": 413.6579982065255,
                 "y": 231.33062012830243
             }
         },
@@ -237,7 +237,7 @@
             "scale": 1.132578125,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 412.7750569083259,
+                "x": 413.6579982065255,
                 "y": 231.33062012830243
             }
         },
@@ -247,9 +247,9 @@
                 10
             ],
             "scale": 1.132578125,
-            "selectedLayer": 7,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 412.7750569083259,
+                "x": 413.6579982065255,
                 "y": 231.33062012830243
             }
         },
@@ -258,9 +258,9 @@
                 10
             ],
             "scale": 1.132578125,
-            "selectedLayer": 8,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 412.7750569083259,
+                "x": 413.6579982065255,
                 "y": 231.33062012830243
             }
         },
@@ -342,18 +342,18 @@
     "project": "elemental_project.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "Water entities.tsx",
-        "Water terrain.tsx",
-        "Water.tsx",
-        "Lava.tsx",
-        "Fire entities.tsx",
-        "Fire terrain.tsx",
+        "level-w03.tmx",
+        "level-f05.tmx",
+        "level-f04.tmx",
+        "level-f03.tmx",
+        "level-f02.tmx",
         "level-f01.tmx",
-        "level-e01.tmx",
-        "level-e02.tmx",
-        "level-e05.tmx",
-        "level-e04.tmx",
-        "level-e03.tmx"
+        "level-a05.tmx",
+        "level-a04.tmx",
+        "level-a03.tmx",
+        "level-a02.tmx",
+        "level-a01.tmx",
+        "level-e02.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",

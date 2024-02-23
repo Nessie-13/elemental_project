@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="64">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="65">
  <tileset firstgid="1" source="General Terrain.tsx"/>
  <tileset firstgid="243" source="Sky.tsx"/>
  <tileset firstgid="477" source="Sky Complete.tsx"/>
@@ -211,9 +211,14 @@
   <object id="6" name="Checkpoint" type="Checkpoint" x="80" y="192" width="64" height="64"/>
   <object id="7" name="coin" type="Coins" x="224" y="192" width="16" height="16"/>
   <object id="8" name="coin" type="Coins" x="512" y="96" width="16" height="16"/>
-  <object id="9" name="coin" type="Coins" x="416" y="144" width="16" height="16"/>
   <object id="12" name="coin" type="Coins" x="512" y="144" width="16" height="16"/>
-  <object id="13" name="coin" type="Coins" x="320" y="144" width="16" height="16"/>
+  <object id="64" name="Saw H" type="Saw" x="320" y="144" width="32" height="32">
+   <properties>
+    <property name="isVertical" type="bool" value="false"/>
+    <property name="offNeg" type="float" value="3"/>
+    <property name="offPos" type="float" value="8"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="10" name="Collisions">
   <object id="37" x="64" y="48" width="496" height="16"/>
