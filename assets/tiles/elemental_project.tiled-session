@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level-w01.tmx",
+    "activeFile": "level-e01.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -153,8 +153,8 @@
             "scale": 1.3392,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 343.8620071684588,
-                "y": 151.58303464755076
+                "x": 343.48864994026286,
+                "y": 152.70310633213862
             }
         },
         "level-e02.tmx": {
@@ -272,8 +272,8 @@
             "scale": 1.4428125,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 248.12648906216154,
-                "y": 145.20251245397444
+                "x": 319.51483647390074,
+                "y": 179.85705003248862
             }
         },
         "level-w02.tmx": {
@@ -282,10 +282,10 @@
                 10
             ],
             "scale": 1.4428125,
-            "selectedLayer": 6,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 320.5544726012562,
-                "y": 184.36213991769543
+                "x": 319.51483647390074,
+                "y": 184.01559454191033
             }
         },
         "level-w03.tmx": {
@@ -296,8 +296,8 @@
             "scale": 1.4428125,
             "selectedLayer": 6,
             "viewCenter": {
-                "x": 315.00974658869393,
-                "y": 179.16395928091833
+                "x": 319.51483647390074,
+                "y": 184.01559454191033
             }
         },
         "level-w04.tmx": {
@@ -306,10 +306,10 @@
                 10
             ],
             "scale": 1.4428125,
-            "selectedLayer": 6,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 320.5544726012562,
-                "y": 184.36213991769543
+                "x": 319.51483647390074,
+                "y": 184.01559454191033
             }
         },
         "level-w05.tmx": {
@@ -337,23 +337,23 @@
         "level-w02.tmx",
         "level-w03.tmx",
         "level-w04.tmx",
-        "level-w05.tmx"
+        "level-e01.tmx"
     ],
     "project": "elemental_project.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "level-w05.tmx",
-        "level-w04.tmx",
-        "level-w03.tmx",
-        "level-w02.tmx",
         "level-w01.tmx",
+        "level-w02.tmx",
+        "level-w03.tmx",
+        "level-w04.tmx",
+        "level-e01.tmx",
+        "level-w05.tmx",
         "level-f05.tmx",
         "level-f04.tmx",
         "level-f03.tmx",
         "level-f02.tmx",
         "level-f01.tmx",
-        "level-a05.tmx",
-        "level-a04.tmx"
+        "level-a05.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
