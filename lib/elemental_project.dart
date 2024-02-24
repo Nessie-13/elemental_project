@@ -29,7 +29,19 @@ class ElementalProject extends FlameGame
     'level-e01',
     'level-e02',
     'level-e03',
-    'level-e04'
+    'level-e04',
+    'level-w01',
+    'level-w02',
+    'level-w03',
+    'level-w04',
+    'level-f01',
+    'level-f02',
+    'level-f03',
+    'level-f04',
+    'level-a01',
+    'level-a02',
+    'level-a03',
+    'level-a04',
   ];
   int currentLevelIndex = 0;
 
